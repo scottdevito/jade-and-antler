@@ -27,9 +27,10 @@ const StyledNavLinks = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-content: space-around;
+  align-content: center;
 `;
 
 const StyledNavLink = styled.p`
-  margin: 1.5em;
+  height: 100%;
+  padding: 0.5em;
 `;
