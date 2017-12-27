@@ -1,11 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const HomeScreen = () => {
   return (
     <div>
-      <header className="App-header">
-        <h1 className="App-title">JADE & ANTLER</h1>
-      </header>
+      <Header>
+        <Title>JADE & ANTLER</Title>
+      </Header>
       <p className="App-intro">
         To get started, edit <code>src/App.js</code> and save to reload.
       </p>
@@ -14,3 +15,13 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
+const Header = styled.header`
+  background-color: #222;
+  padding: 4em;
+  color: white;
+`;
+
+const Title = styled.h1`
+  font-size: 1.5em;
+`;
