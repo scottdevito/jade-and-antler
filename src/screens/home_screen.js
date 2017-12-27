@@ -38,4 +38,5 @@ const Title = styled.h1`
   align-items: flex-start;
   justify-content: flex-end;
   font-size: 1.5em;
+  margin-left: 0.25em;
 `;
