@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import './App.css';
 import AppBarNav from './components/app_bar_nav';
 import HomeScreen from './screens/home_screen';
 
