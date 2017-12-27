@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import heroImage from '../images/heroImage.jpg';
 import Signup from '../components/signup.js';
+import InstagramFeed from '../components/instagram_feed';
 
 const HomeScreen = () => {
   return (
@@ -10,6 +11,7 @@ const HomeScreen = () => {
       <Hero>
         <Title>JADE & ANTLER</Title>
       </Hero>
+      <InstagramFeed />
       <Signup />
     </div>
   );
@@ -39,4 +41,12 @@ const Title = styled.h1`
   justify-content: flex-end;
   font-size: 1.5em;
   margin-left: 0.25em;
+  margin-bottom: 0.5em;
+
+  @media (max-width: 425px) {
+    margin-bottom: 1.5em;
+    @media (min-height: 710px) {
+      margin-bottom: 3.25em;
+    }
+  }
 `;
