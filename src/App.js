@@ -9,15 +9,15 @@ import HomeScreen from './screens/home_screen';
 class App extends Component {
   render() {
     return (
-      <StyledApp>
-        <AppBarNav />
-        <Router>
+      <Router>
+        <StyledApp>
+          <AppBarNav />
           <Route exact path="/" component={HomeScreen} />
           {/* <Route path="/about" component={AboutScreen}/>
       <Route path="/workshops" component={WorkshopsScreen}/>
       <Route path="/blog" component={BlogScreen}/> */}
-        </Router>
-      </StyledApp>
+        </StyledApp>
+      </Router>
     );
   }
 }
