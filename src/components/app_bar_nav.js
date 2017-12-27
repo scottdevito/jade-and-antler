@@ -34,7 +34,7 @@ export default AppBarNav;
 
 const StyledAppBar = styled(AppBar)`
   width: 100%;
-  height: 4em;
+  height: 3.5em;
 `;
 
 const StyledNavLinks = styled.div`
@@ -42,8 +42,14 @@ const StyledNavLinks = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
+  height: 100%;
 `;
 
 const StyledNavLink = styled.p`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   height: 100%;
+  margin: 0;
 `;
