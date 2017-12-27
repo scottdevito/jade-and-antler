@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import heroImage from '../images/heroImage.jpg';
+import Signup from '../components/signup.js';
 
 const HomeScreen = () => {
   return (
@@ -9,9 +10,7 @@ const HomeScreen = () => {
       <Hero>
         <Title>JADE & ANTLER</Title>
       </Hero>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+      <Signup />
     </div>
   );
 };
@@ -23,7 +22,7 @@ const Hero = styled.header`
   flex-direction: column;
   justify-content: flex-end;
   background-color: #222;
-  height: 86vh;
+  height: 100vh;
   color: white;
 
   background-image: url(${heroImage});

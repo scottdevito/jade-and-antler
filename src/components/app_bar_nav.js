@@ -5,7 +5,7 @@ import AppBar from 'material-ui/AppBar';
 class AppBarNav extends Component {
   render() {
     return (
-      <StyledAppBar position="static" color="default">
+      <StyledAppBar color="default">
         <StyledNavLinks>
           <StyledNavLink>About Us</StyledNavLink>
           <StyledNavLink>Workshops</StyledNavLink>
