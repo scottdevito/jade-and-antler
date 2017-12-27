@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const HomeScreen = () => {
   return (
     <div>
-      <Header>
+      <Hero>
         <Title>JADE & ANTLER</Title>
-      </Header>
+      </Hero>
       <p className="App-intro">
         To get started, edit <code>src/App.js</code> and save to reload.
       </p>
@@ -16,9 +16,9 @@ const HomeScreen = () => {
 
 export default HomeScreen;
 
-const Header = styled.header`
+const Hero = styled.header`
   background-color: #222;
-  padding: 4em;
+  padding: 8em;
   color: white;
 `;
 
