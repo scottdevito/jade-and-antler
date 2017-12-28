@@ -9,11 +9,11 @@ function InstagramFeed(props) {
   return (
     <StyledGridListContainer>
       <InstagramFeedHeader />
-      <StyledGridList cellHeight={160} cols={3}>
+      <StyledGridList cellHeight={180} cols={3}>
         {tileData.map(tile => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
+          <StyledTile key={tile.img} cols={tile.cols || 1}>
             <img src={tile.img} alt={tile.title} />
-          </GridListTile>
+          </StyledTile>
         ))}
       </StyledGridList>
     </StyledGridListContainer>
@@ -27,7 +27,7 @@ const StyledGridListContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70vw;
+  width: 75vw;
   /* height: 250 */
   margin-top: 8em;
   margin-bottom: 8em;
@@ -38,4 +38,16 @@ const StyledGridList = styled(GridList)`
   flex-wrap: wrap;
   justify-content: space-around;
   overflow: hidden;
+`;
+
+const StyledTile = styled(GridListTile)`
+  height: 220px;
+
+  @media (max-width > 425px && max-width < 769px) {
+    height: 100px;
+  }
+
+  @media (max-width > 769px) {
+    height: 240px;
+  }
 `;
