@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import heroImage from '../images/heroImage.jpg';
 import Signup from '../components/signup.js';
-import InstagramFeed from '../components/instagram_feed';
+import InstagramFeed from '../components/instagram/instagram_feed';
 
 const HomeScreen = () => {
   return (
