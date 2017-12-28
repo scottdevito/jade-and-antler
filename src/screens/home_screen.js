@@ -11,13 +11,22 @@ const HomeScreen = () => {
       <Hero>
         <Title>JADE & ANTLER</Title>
       </Hero>
-      <InstagramFeed />
-      <Signup />
+      <StyledHomeScreenContainer>
+        <InstagramFeed />
+        <Signup />
+      </StyledHomeScreenContainer>
     </div>
   );
 };
 
 export default HomeScreen;
+
+const StyledHomeScreenContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Hero = styled.header`
   display: flex;
