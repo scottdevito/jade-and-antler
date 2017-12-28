@@ -26,8 +26,8 @@ const StyledGridListContainer = styled.div`
   align-items: center;
   width: 65vw;
   /* height: 250 */
-  margin-top: 4em;
-  margin-bottom: 4em;
+  margin-top: 8em;
+  margin-bottom: 8em;
 `;
 
 const StyledGridList = styled(GridList)`

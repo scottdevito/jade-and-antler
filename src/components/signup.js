@@ -8,6 +8,9 @@ class Signup extends Component {
     return (
       <StyledSignup>
         <h1>Sign up for updates</h1>
+        <StyledSubtleText>
+          Sign up to recieve the latest scoop on new workshops and blog posts
+        </StyledSubtleText>
         <TextField
           label="Enter your email"
           style={{
@@ -18,10 +21,9 @@ class Signup extends Component {
           }}
           margin="normal"
         />
-        <StyledSubtleText>
-          Sign up to recieve the latest scoop on new workshops and blog posts
-        </StyledSubtleText>
-        <Button style={{ marginTop: '1em', marginBottom: '2em' }}>Submit</Button>
+        <Button style={{ marginTop: '1em', marginBottom: '2em' }}>
+          Submit
+        </Button>
       </StyledSignup>
     );
   }
@@ -34,6 +36,10 @@ const StyledSignup = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #ebedf8;
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 3em;
 `;
 
 const StyledSubtleText = styled.p`
