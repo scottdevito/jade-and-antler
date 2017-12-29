@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import heroImage from '../images/heroImage.jpg';
+import homeHeroImage from '../images/heros/homeHeroImage.jpg';
 import Signup from '../components/signup.js';
 import InstagramFeed from '../components/instagram/instagram_feed';
 import Footer from '../components/footer';
@@ -10,23 +10,23 @@ const HomeScreen = () => {
   return (
     <div>
       <Hero>
-        <Title>JADE & ANTLER</Title>
+        <Title>JADE&ANTLER</Title>
       </Hero>
-      <StyledHomeScreenContainer>
+      <StyledScreenContainer>
         <StyledMissionStatementBanner>
           YOGA•COMMUNITY•EMPOWERMENT
         </StyledMissionStatementBanner>
         <InstagramFeed />
         <Signup />
         <Footer />
-      </StyledHomeScreenContainer>
+      </StyledScreenContainer>
     </div>
   );
 };
 
 export default HomeScreen;
 
-const StyledHomeScreenContainer = styled.div`
+const StyledScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@ const Hero = styled.header`
   height: 100vh;
   color: white;
 
-  background-image: url(${heroImage});
+  background-image: url(${homeHeroImage});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
