@@ -10,8 +10,13 @@ class AppBarNav extends Component {
       <StyledAppBar color="default">
         <StyledNavLinks>
           <StyledNavLink>
+            <NavLink to="/" style={{ textDecoration: 'none' }}>
+              <Button>Home</Button>
+            </NavLink>
+          </StyledNavLink>
+          <StyledNavLink>
             <NavLink to="/about" style={{ textDecoration: 'none' }}>
-              <Button>About Us</Button>
+              <Button>About</Button>
             </NavLink>
           </StyledNavLink>
           <StyledNavLink>

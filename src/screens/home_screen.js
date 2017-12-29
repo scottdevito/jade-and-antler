@@ -12,6 +12,9 @@ const HomeScreen = () => {
         <Title>JADE & ANTLER</Title>
       </Hero>
       <StyledHomeScreenContainer>
+        <StyledMissionStatementBanner>
+          YOGA•COMMUNITY•EMPOWERMENT
+        </StyledMissionStatementBanner>
         <InstagramFeed />
         <Signup />
       </StyledHomeScreenContainer>
@@ -57,5 +60,23 @@ const Title = styled.h1`
     @media (min-height: 710px) {
       margin-bottom: 3.25em;
     }
+  }
+`;
+
+const StyledMissionStatementBanner = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #b29e93;
+  font-weight: bold;
+  font-size: 1.75em;
+  height: 4em;
+  width: 100%;
+  margin-top: 3.5em;
+
+  @media (max-width: 767px) {
+    font-size: 0.75em;
   }
 `;
