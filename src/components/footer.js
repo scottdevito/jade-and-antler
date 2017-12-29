@@ -20,7 +20,13 @@ const Footer = () => {
           <StyledSocialIcon src={fbIcon} alt="facebook icon" />
         </StyledNavItem>
         <StyledNavItem>
-          <StyledSocialIcon src={igIcon} alt="instagram icon" />
+          <a
+            href="https://www.instagram.com/jadeandantler/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <StyledSocialIcon src={igIcon} alt="instagram icon" />
+          </a>
         </StyledNavItem>
       </StyledNavAndSocial>
     </StyledFooter>
@@ -72,6 +78,6 @@ const StyledNavItem = styled.div`
 `;
 
 const StyledSocialIcon = styled.img`
-  height: 3em;
-  width: 3em;
+  height: 2em;
+  width: 2em;
 `;

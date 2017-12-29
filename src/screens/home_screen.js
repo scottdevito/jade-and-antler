@@ -10,7 +10,7 @@ const HomeScreen = () => {
   return (
     <div>
       <Hero>
-        <Title>JADE & ANTLER</Title>
+        <Title>JADE&ANTLER</Title>
       </Hero>
       <StyledHomeScreenContainer>
         <StyledMissionStatementBanner>
