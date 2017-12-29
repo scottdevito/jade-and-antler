@@ -8,7 +8,7 @@ import InstagramFeedHeader from './instagram_feed_header';
 function InstagramFeed(props) {
   return (
     <StyledGridListContainer>
-      <InstagramFeedHeader />
+      {/* <InstagramFeedHeader /> */}
       <StyledGridList cellHeight={180} cols={3}>
         {tileData.map(tile => (
           <StyledTile key={tile.img} cols={tile.cols || 1}>
@@ -29,8 +29,12 @@ const StyledGridListContainer = styled.div`
   align-items: center;
   width: 75vw;
   /* height: 250 */
-  margin-top: 8em;
-  margin-bottom: 8em;
+  margin-top: 10em;
+  margin-bottom: 10em;
+
+  @media (max-width: 767px) {
+    margin-top: 6em;
+  }
 `;
 
 const StyledGridList = styled(GridList)`

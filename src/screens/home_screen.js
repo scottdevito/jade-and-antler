@@ -74,9 +74,11 @@ const StyledMissionStatementBanner = styled.div`
   font-size: 1.75em;
   height: 4em;
   width: 100%;
-  margin-top: 3.5em;
+  margin-top: 5em;
 
   @media (max-width: 767px) {
-    font-size: 0.75em;
+    font-size: 1em;
+    height: 8em;
+    margin-top: 6em;
   }
 `;
