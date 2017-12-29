@@ -3,12 +3,11 @@ import styled from 'styled-components';
 import { GridList, GridListTile } from 'material-ui/GridList';
 import { tileData } from '../../images/mockIgPics/tileData';
 
-import InstagramFeedHeader from './instagram_feed_header';
+// import InstagramFeedHeader from './instagram_feed_header';
 
 function InstagramFeed(props) {
   return (
     <StyledGridListContainer>
-      {/* <InstagramFeedHeader /> */}
       <StyledGridList cellHeight={180} cols={3}>
         {tileData.map(tile => (
           <StyledTile key={tile.img} cols={tile.cols || 1}>

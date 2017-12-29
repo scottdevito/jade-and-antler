@@ -36,7 +36,7 @@ const StyledSignup = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ebedf8;
+  background-color: #e4e0e1;
   width: 100%;
   padding-top: 3em;
   padding-bottom: 3em;
