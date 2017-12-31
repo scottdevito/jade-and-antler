@@ -11,17 +11,17 @@ const AboutScreen = () => {
       <Hero>
         <Title>ABOUT JADE&ANTLER</Title>
       </Hero>
-      <StyledScreenContainer>
+      <StyledScreenWrapper>
         <About />
         <Footer />
-      </StyledScreenContainer>
+      </StyledScreenWrapper>
     </div>
   );
 };
 
 export default AboutScreen;
 
-const StyledScreenContainer = styled.div`
+const StyledScreenWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -12,21 +12,21 @@ const HomeScreen = () => {
       <Hero>
         <Title>JADE&ANTLER</Title>
       </Hero>
-      <StyledScreenContainer>
+      <StyledScreenWrapper>
         <StyledMissionStatementBanner>
           YOGA•COMMUNITY•EMPOWERMENT
         </StyledMissionStatementBanner>
         <InstagramFeed />
         <Signup />
         <Footer />
-      </StyledScreenContainer>
+      </StyledScreenWrapper>
     </div>
   );
 };
 
 export default HomeScreen;
 
-const StyledScreenContainer = styled.div`
+const StyledScreenWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
