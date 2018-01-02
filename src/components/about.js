@@ -92,7 +92,7 @@ const StyledAboutUsWrapper = styled.div`
   text-align: center;
   font-size: 1.25rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     width: 90vw;
   }
 `;
@@ -121,7 +121,7 @@ const StyledAboutWrapper = styled.div`
   overflow: hidden;
 
   
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -139,9 +139,10 @@ const StyledAboutReverseWrapper = styled.div`
   text-align: center;
   font-size: 1.25rem;
   overflow: hidden;
+  margin-bottom: 4em;
 
   
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -151,7 +152,11 @@ const StyledAboutReverseWrapper = styled.div`
 `;
 
 const StyledAboutImage = styled.img`
-  height: 30em;
-  width: 20em;
+  width: 23vw;
   margin: 1.5em;
+
+  @media (max-width: 767px) {
+    width: 70vw;
+    }
+  }
 `;
