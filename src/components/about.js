@@ -139,7 +139,6 @@ const StyledAboutReverseWrapper = styled.div`
   text-align: center;
   font-size: 1.25rem;
   overflow: hidden;
-  margin-bottom: 4em;
 
   
   @media (max-width: 1023px) {

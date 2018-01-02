@@ -18,8 +18,8 @@ const HomeScreen = () => {
         </StyledMissionStatementBanner>
         <InstagramFeed />
         <Signup />
-        <Footer />
       </StyledScreenWrapper>
+      <Footer />
     </div>
   );
 };

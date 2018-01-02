@@ -13,8 +13,8 @@ const AboutScreen = () => {
       </Hero>
       <StyledScreenWrapper>
         <About />
-        <Footer />
       </StyledScreenWrapper>
+      <Footer />
     </div>
   );
 };
@@ -26,6 +26,7 @@ const StyledScreenWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 4em;
 `;
 
 const Hero = styled.header`
