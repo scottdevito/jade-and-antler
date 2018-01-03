@@ -38,7 +38,7 @@ const About = () => {
           inner worlds. Additionally, Jeanine holds her Bachelor of Arts from
           CUNY Queens College and is in the process of applying to Graduate
           school for Mental Health Counseling. Jeanine is thrilled to
-          collaborate creatively with Jesiica in spirit and energy to bring
+          collaborate creatively with Jessica in spirit and energy to bring
           uplifting, empowering and transformative programs to their communities
           through Jade&Antler.
         </p>
