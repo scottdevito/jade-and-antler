@@ -16,23 +16,75 @@ class WorkshopsScreen extends Component {
       <div>
         <StyledScreenWrapper>
           <StyledJanHeader>January 2018</StyledJanHeader>
-          <WorkshopCard />
-          <WorkshopCard />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="January 14, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="January 17, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
           <StyledFebHeader>Febrary 2018</StyledFebHeader>
-          <WorkshopCard />
-          <WorkshopCard />
-          <WorkshopCard />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="February 03, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="February 14, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="February 29, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
           <StyledMarHeader>March 2018</StyledMarHeader>
-          <WorkshopCard />
-          <WorkshopCard />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="March 11, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="March 16, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
           <StyledAprHeader>April 2018</StyledAprHeader>
-          <WorkshopCard />
-          <WorkshopCard />
-          <WorkshopCard />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="April 07, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="April 13, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="April 19, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
           <StyledMayHeader>May 2018</StyledMayHeader>
-          <WorkshopCard />
-          <WorkshopCard />
-          <WorkshopCard />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="May 01, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="May 22, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
+          <WorkshopCard
+            name="Yoga and Meditation Workshop"
+            date="May 25, 2018"
+            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
+          />
         </StyledScreenWrapper>
         <Footer />
       </div>
