@@ -15,7 +15,9 @@ class WorkshopsScreen extends Component {
     return (
       <div>
         <StyledScreenWrapper>
-          <StyledJanHeader>January 2018</StyledJanHeader>
+          <StyledMonthHeader monthImage={JanImg}>
+            January 2018
+          </StyledMonthHeader>
           <WorkshopCard
             name="Yoga and Meditation Workshop"
             date="January 14, 2018"
@@ -26,7 +28,9 @@ class WorkshopsScreen extends Component {
             date="January 17, 2018"
             description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
           />
-          <StyledFebHeader>Febrary 2018</StyledFebHeader>
+          <StyledMonthHeader monthImage={FebImg}>
+            Febrary 2018
+          </StyledMonthHeader>
           <WorkshopCard
             name="Yoga and Meditation Workshop"
             date="February 03, 2018"
@@ -42,7 +46,7 @@ class WorkshopsScreen extends Component {
             date="February 29, 2018"
             description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
           />
-          <StyledMarHeader>March 2018</StyledMarHeader>
+          <StyledMonthHeader monthImage={MarImg}>March 2018</StyledMonthHeader>
           <WorkshopCard
             name="Yoga and Meditation Workshop"
             date="March 11, 2018"
@@ -53,7 +57,7 @@ class WorkshopsScreen extends Component {
             date="March 16, 2018"
             description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
           />
-          <StyledAprHeader>April 2018</StyledAprHeader>
+          <StyledMonthHeader monthImage={AprImg}>April 2018</StyledMonthHeader>
           <WorkshopCard
             name="Yoga and Meditation Workshop"
             date="April 07, 2018"
@@ -69,7 +73,7 @@ class WorkshopsScreen extends Component {
             date="April 19, 2018"
             description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
           />
-          <StyledMayHeader>May 2018</StyledMayHeader>
+          <StyledMonthHeader monthImage={MayImg}>May 2018</StyledMonthHeader>
           <WorkshopCard
             name="Yoga and Meditation Workshop"
             date="May 01, 2018"
@@ -114,6 +118,7 @@ const StyledMonthHeader = styled.div`
   color: #ffffff;
   background-color: #b29e93;
 
+  background-image: url('${props => props.monthImage}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,24 +132,4 @@ const StyledMonthHeader = styled.div`
     font-size: 1.5em;
     height: 5em;
   }
-`;
-
-const StyledJanHeader = StyledMonthHeader.extend`
-  background-image: url('${JanImg}');
-`;
-
-const StyledFebHeader = StyledMonthHeader.extend`
-  background-image: url('${FebImg}');
-`;
-
-const StyledMarHeader = StyledMonthHeader.extend`
-  background-image: url('${MarImg}');
-`;
-
-const StyledAprHeader = StyledMonthHeader.extend`
-  background-image: url('${AprImg}');
-`;
-
-const StyledMayHeader = StyledMonthHeader.extend`
-  background-image: url('${MayImg}');
 `;
