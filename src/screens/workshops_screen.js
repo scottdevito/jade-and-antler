@@ -41,7 +41,7 @@ class WorkshopsScreen extends Component {
     let monthHeaderImg = this.monthImageToRender(currentEventMonthAbbrev);
 
     return (
-      <div key={event.eventId}>
+      <StyledMonthHeaderWrapper key={event.eventId}>
         <StyledMonthHeader monthImage={`${monthHeaderImg}`}>
           {event.month} {event.year}
         </StyledMonthHeader>
@@ -52,7 +52,7 @@ class WorkshopsScreen extends Component {
           year={event.year}
           description={event.description}
         />
-      </div>
+      </StyledMonthHeaderWrapper>
     );
   };
 
@@ -135,4 +135,12 @@ const StyledMonthHeader = styled.div`
     font-size: 1.5em;
     height: 5em;
   }
+`;
+
+const StyledMonthHeaderWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
