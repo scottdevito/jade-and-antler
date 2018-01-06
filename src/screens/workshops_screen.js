@@ -10,85 +10,88 @@ import MarImg from '../images/workshopHeaders/mar.jpg';
 import AprImg from '../images/workshopHeaders/apr.jpg';
 import MayImg from '../images/workshopHeaders/may.jpg';
 
+import { Workshops } from '../components/workshops/workshops_mock_data';
+
 class WorkshopsScreen extends Component {
+  renderWorkshopsWithHeaders = Workshops => {
+    let currentMonth = 'none';
+
+    return Workshops.map(event => {
+      let currentEventMonthAbbrev = event.month.slice(0, 3);
+
+      if (currentMonth !== currentEventMonthAbbrev) {
+        currentMonth = currentEventMonthAbbrev;
+        return this.renderMonthHeader(event, currentEventMonthAbbrev);
+      }
+
+      return (
+        <WorkshopCard
+          key={event.eventId}
+          name={event.name}
+          month={event.month}
+          day={event.day}
+          year={event.year}
+          description={event.description}
+        />
+      );
+    });
+  };
+
+  renderMonthHeader = (event, currentEventMonthAbbrev) => {
+    let monthHeaderImg = this.monthImageToRender(currentEventMonthAbbrev);
+
+    return (
+      <div key={event.eventId}>
+        <StyledMonthHeader monthImage={`${monthHeaderImg}`}>
+          {event.month} {event.year}
+        </StyledMonthHeader>
+        <WorkshopCard
+          name={event.name}
+          month={event.month}
+          day={event.day}
+          year={event.year}
+          description={event.description}
+        />
+      </div>
+    );
+  };
+
+  monthImageToRender = currentEventMonthAbbrev => {
+    switch (currentEventMonthAbbrev) {
+      case 'Jan':
+        return JanImg;
+      case 'Feb':
+        return FebImg;
+      case 'Mar':
+        return MarImg;
+      case 'Apr':
+        return AprImg;
+      case 'May':
+        return MayImg;
+      // case 'Jun':
+      // return JunImg;
+      // case 'Jul':
+      // return JulImg;
+      // case 'Aug':
+      // return AugImg;
+      // case 'Sep':
+      // return SepImg;
+      // case 'Oct':
+      // return OctImg;
+      // case 'Nov':
+      // return NovImg;
+      // case 'Dec':
+      // return DecImg;
+      default:
+        return null;
+    }
+  };
+
   render() {
     return (
       <div>
         <StyledScreenWrapper>
-          <StyledMonthHeader monthImage={JanImg}>
-            January 2018
-          </StyledMonthHeader>
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="January 14, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="January 17, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <StyledMonthHeader monthImage={FebImg}>
-            Febrary 2018
-          </StyledMonthHeader>
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="February 03, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="February 14, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="February 29, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <StyledMonthHeader monthImage={MarImg}>March 2018</StyledMonthHeader>
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="March 11, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="March 16, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <StyledMonthHeader monthImage={AprImg}>April 2018</StyledMonthHeader>
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="April 07, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="April 13, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="April 19, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <StyledMonthHeader monthImage={MayImg}>May 2018</StyledMonthHeader>
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="May 01, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="May 22, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
-          <WorkshopCard
-            name="Yoga and Meditation Workshop"
-            date="May 25, 2018"
-            description="Join us for a 2 hour session of Vinyassa yoga and mediation on a Sunday afternoon. This is a long card for length."
-          />
+          {this.renderWorkshopsWithHeaders(Workshops)}
         </StyledScreenWrapper>
         <Footer />
       </div>

@@ -28,7 +28,9 @@ class WorkshopCard extends React.Component {
           <CardHeader
             avatar={<Avatar aria-label="Workshop">W</Avatar>}
             title={this.props.name}
-            subheader={this.props.date}
+            subheader={`${this.props.month} ${this.props.day} ${
+              this.props.year
+            }`}
           />
           <CardMedia
             image="/static/images/cards/paella.jpg"
