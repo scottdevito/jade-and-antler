@@ -54,11 +54,10 @@ class WorkshopCard extends React.Component {
           <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
             <CardContent>
               <Typography paragraph type="body2">
-                Method:
+                Event Details
               </Typography>
               <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron
-                and set aside for 10 minutes.
+                Some more details about this event. Directions, time, etc.
               </Typography>
             </CardContent>
           </Collapse>
