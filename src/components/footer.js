@@ -22,8 +22,8 @@ const Footer = () => {
         <StyledNavItem>
           <a
             href="https://www.instagram.com/jadeandantler/"
-            rel="noopener noreferrer"
-            target="_blank"
+            data-content="https://instagram.com/jadeandantler"
+            data-type="external"
           >
             <StyledSocialIcon src={igIcon} alt="instagram icon" />
           </a>
