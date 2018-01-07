@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import aboutUsImage from '../images/about/aboutUs.jpg';
 import aboutJeanineImage from '../images/about/aboutJeanine.jpg';
 import aboutJessicaImage from '../images/about/aboutJessica.jpg';
 
@@ -8,7 +9,8 @@ const About = () => {
   return (
     <StyledScreenWrapper>
       <StyledAboutUsWrapper>
-        <AboutUsHeader>ABOUT US</AboutUsHeader>
+        <StyledAboutUsHeader>ABOUT US</StyledAboutUsHeader>
+        <StyledAboutUsImage src={aboutUsImage} alt="About us" />
         <p>
           Your vibe attracts your tribe. A huge part of what we believe at J&A
           is that it's important to be around people who lift you up, who
@@ -23,7 +25,7 @@ const About = () => {
 
       <StyledAboutHeader>JEANINE</StyledAboutHeader>
       <StyledAboutWrapper>
-        <StyledAboutImage src={aboutJeanineImage} alt="Jeanine" />
+        <StyledAboutJeanineImage src={aboutJeanineImage} alt="Jeanine" />
         <p>
           Jeanine Talento, E-RYT, is a New York native currently living in
           Oceanside, California. Jeanine was introduced to the healing benefits
@@ -67,7 +69,7 @@ const About = () => {
           in ecstatic, fiery love. Jessica currently lives with her pup Lucy in
           Denver, Colorado.
         </p>
-        <StyledAboutImage src={aboutJessicaImage} alt="Jessica" />
+        <StyledAboutJessicaImage src={aboutJessicaImage} alt="Jessica" />
       </StyledAboutReverseWrapper>
     </StyledScreenWrapper>
   );
@@ -91,6 +93,7 @@ const StyledAboutUsWrapper = styled.div`
   width: 60vw;
   text-align: center;
   font-size: 1.25rem;
+  margin-bottom: 2em;
 
   @media (max-width: 1023px) {
     width: 90vw;
@@ -106,7 +109,7 @@ const StyledAboutHeader = styled.div`
   font-size: 1.75em;
   margin-top: 2em;
 `;
-const AboutUsHeader = StyledAboutHeader.extend`
+const StyledAboutUsHeader = StyledAboutHeader.extend`
   font-size: 2.5rem;
 `;
 
@@ -119,7 +122,7 @@ const StyledAboutWrapper = styled.div`
   text-align: center;
   font-size: 1.25rem;
   overflow: hidden;
-
+  margin-bottom: 4em;
   
   @media (max-width: 1023px) {
     flex-direction: column;
@@ -139,7 +142,7 @@ const StyledAboutReverseWrapper = styled.div`
   text-align: center;
   font-size: 1.25rem;
   overflow: hidden;
-
+  margin-bottom: 4em;
   
   @media (max-width: 1023px) {
     flex-direction: column-reverse;
@@ -152,10 +155,25 @@ const StyledAboutReverseWrapper = styled.div`
 
 const StyledAboutImage = styled.img`
   width: 23vw;
-  margin: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+margin-left: 4.5em;
+margin-right: 4.5em;
 
   @media (max-width: 767px) {
     width: 70vw;
     }
   }
+`;
+
+const StyledAboutJeanineImage = StyledAboutImage.extend`
+  width: 28vw;
+`;
+
+const StyledAboutJessicaImage = StyledAboutImage.extend`
+  margin-left: 8em;
+`;
+
+const StyledAboutUsImage = StyledAboutImage.extend`
+  width: 28vw;
 `;

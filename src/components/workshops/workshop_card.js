@@ -13,18 +13,18 @@ const WorkshopCard = ({ event }) => {
       <CardHeader
         avatar={<Avatar aria-label="Workshop">W</Avatar>}
         title={event.name}
-        subheader={`${event.month} ${event.day} ${event.year}`}
+        subheader={`${event.month} ${event.day}, ${event.year}`}
       />
       <CardContent>
-        <Typography paragraph type="body 2" style={{ marginBottom: '1px' }}>
+        <Typography paragraph type="p" style={{ marginBottom: '1px' }}>
           <a href={event.eventLink} rel="noopener noreferrer" target="_blank">
             {event.venue}
           </a>
         </Typography>
-        <Typography paragraph type="body 1" style={{ marginBottom: '1px' }}>
+        <Typography paragraph type="p" style={{ marginBottom: '1px' }}>
           {event.address} {` ${event.location}`}
         </Typography>
-        <Typography paragraph type="body 1" style={{ marginBottom: '1px' }}>
+        <Typography paragraph type="p" style={{ marginBottom: '1px' }}>
           {`${event.timeStart} - `} {event.timeEnd}
         </Typography>
       </CardContent>

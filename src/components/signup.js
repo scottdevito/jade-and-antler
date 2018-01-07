@@ -9,7 +9,7 @@ class Signup extends Component {
       <StyledSignup>
         <h1>Sign up for updates</h1>
         <StyledSubtleText>
-          Sign up to recieve the latest scoop on new workshops and blog posts
+          Sign up to receive the latest news on new workshops and blog posts
         </StyledSubtleText>
         <TextField
           label="Enter your email"
