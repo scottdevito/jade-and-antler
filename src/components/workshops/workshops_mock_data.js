@@ -7,10 +7,10 @@ export const Workshops = [
     year: 2018,
     description:
       'Yoga workshop event description here. Some info about the workshop.',
-    eventLink: 'www.usdenver.com',
+    eventLink: 'http://www.usdenver.com',
     location: 'Denver, CO',
     venue: 'Urban Sanctuary',
-    address: '',
+    address: '2745 Welton St.',
     timeStart: '3pm',
     timeEnd: '5pm',
   },
@@ -20,7 +20,9 @@ export const Workshops = [
     month: 'March',
     day: 25,
     year: 2018,
-    description: 'www.blacksheepyogastudio.com',
+    description:
+      'Yoga workshop event description here. Some info about the workshop.',
+    eventLink: 'http://www.blacksheepyogastudio.com',
     location: 'Oceanside, CA',
     venue: 'Black Sheep Yoga',
     address: '1828 S. Coast Hwy',

@@ -17,7 +17,9 @@ const WorkshopCard = ({ event }) => {
       />
       <CardContent>
         <Typography paragraph type="body 2" style={{ marginBottom: '1px' }}>
-          {event.venue}
+          <a href={event.eventLink} rel="noopener noreferrer" target="_blank">
+            {event.venue}
+          </a>
         </Typography>
         <Typography paragraph type="body 1" style={{ marginBottom: '1px' }}>
           {event.address} {` ${event.location}`}
