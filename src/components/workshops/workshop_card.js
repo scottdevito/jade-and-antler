@@ -1,74 +1,46 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Card, {
-  CardHeader,
-  CardMedia,
-  CardContent,
-  CardActions,
-} from 'material-ui/Card';
-import Collapse from 'material-ui/transitions/Collapse';
+import Card, { CardHeader, CardContent, CardActions } from 'material-ui/Card';
 import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 import ShareIcon from 'material-ui-icons/Share';
-import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
-class WorkshopCard extends React.Component {
-  state = { expanded: false };
-
-  handleExpandClick = () => {
-    this.setState({ expanded: !this.state.expanded });
-  };
-
-  render() {
-    return (
-      <div>
-        <StyledCard>
-          <CardHeader
-            avatar={<Avatar aria-label="Workshop">W</Avatar>}
-            title={this.props.name}
-            subheader={`${this.props.month} ${this.props.day} ${
-              this.props.year
-            }`}
-          />
-          <CardMedia
-            image="/static/images/cards/paella.jpg"
-            title="Contemplative Reptile"
-          />
-          <CardContent>
-            <Typography component="p">{this.props.description}</Typography>
-          </CardContent>
-          <CardActions disableActionSpacing>
-            <IconButton aria-label="Share">
-              <ShareIcon />
-            </IconButton>
-            <IconButton
-              onClick={this.handleExpandClick}
-              aria-expanded={this.state.expanded}
-              aria-label="Show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions>
-          <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography paragraph type="body2">
-                Event Details
-              </Typography>
-              <Typography paragraph>
-                Some more details about this event. Directions, time, etc.
-              </Typography>
-            </CardContent>
-          </Collapse>
-        </StyledCard>
-      </div>
-    );
-  }
-}
+const WorkshopCard = ({ event }) => {
+  return (
+    <StyledCard>
+      <CardHeader
+        avatar={<Avatar aria-label="Workshop">W</Avatar>}
+        title={event.name}
+        subheader={`${event.month} ${event.day} ${event.year}`}
+      />
+      <CardContent>
+        <Typography paragraph type="body 2" style={{ marginBottom: '1px' }}>
+          {event.venue}
+        </Typography>
+        <Typography paragraph type="body 1" style={{ marginBottom: '1px' }}>
+          {event.address} {` ${event.location}`}
+        </Typography>
+        <Typography paragraph type="body 1" style={{ marginBottom: '1px' }}>
+          {`${event.timeStart} - `} {event.timeEnd}
+        </Typography>
+      </CardContent>
+      <CardContent>
+        <Typography component="p">{event.description}</Typography>
+      </CardContent>
+      <CardActions disableActionSpacing>
+        <IconButton aria-label="Share">
+          <ShareIcon />
+        </IconButton>
+      </CardActions>
+    </StyledCard>
+  );
+};
 export default WorkshopCard;
 
 const StyledCard = styled(Card)`
+  width: 96%;
   max-width: 700px;
   margin: 0.5em;
 

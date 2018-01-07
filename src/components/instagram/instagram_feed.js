@@ -8,7 +8,7 @@ import { tileData } from '../../images/mockIgPics/tileData';
 function InstagramFeed(props) {
   return (
     <StyledGridListContainer>
-      <StyledGridList cellHeight={180} cols={3}>
+      <StyledGridList cols={3}>
         {tileData.map(tile => (
           <StyledTile key={tile.img} cols={tile.cols || 1}>
             <img src={tile.img} alt={tile.title} />
@@ -26,7 +26,7 @@ const StyledGridListContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 75vw;
+  width: 65vw;
   /* height: 250 */
   margin-top: 10em;
   margin-bottom: 10em;

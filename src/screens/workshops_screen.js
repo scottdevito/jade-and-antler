@@ -24,16 +24,7 @@ class WorkshopsScreen extends Component {
         return this.renderMonthHeader(event, currentEventMonthAbbrev);
       }
 
-      return (
-        <WorkshopCard
-          key={event.eventId}
-          name={event.name}
-          month={event.month}
-          day={event.day}
-          year={event.year}
-          description={event.description}
-        />
-      );
+      return <WorkshopCard key={event.eventId} event={event} />;
     });
   };
 
@@ -43,15 +34,9 @@ class WorkshopsScreen extends Component {
     return (
       <StyledMonthHeaderWrapper key={event.eventId}>
         <StyledMonthHeader monthImage={`${monthHeaderImg}`}>
-          {event.month} {event.year}
+          {event.month} {` ${event.year}`}
         </StyledMonthHeader>
-        <WorkshopCard
-          name={event.name}
-          month={event.month}
-          day={event.day}
-          year={event.year}
-          description={event.description}
-        />
+        <WorkshopCard event={event} />
       </StyledMonthHeaderWrapper>
     );
   };
