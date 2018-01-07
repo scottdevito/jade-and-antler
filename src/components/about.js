@@ -157,8 +157,8 @@ const StyledAboutImage = styled.img`
   width: 23vw;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-margin-left: 4.5em;
-margin-right: 4.5em;
+  margin-left: 4.5em;
+  margin-right: 4.5em;
 
   @media (max-width: 767px) {
     width: 70vw;
@@ -171,7 +171,10 @@ const StyledAboutJeanineImage = StyledAboutImage.extend`
 `;
 
 const StyledAboutJessicaImage = StyledAboutImage.extend`
+@media (min-width: 767px) {
   margin-left: 8em;
+  }
+}
 `;
 
 const StyledAboutUsImage = StyledAboutImage.extend`

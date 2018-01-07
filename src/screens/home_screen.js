@@ -14,7 +14,7 @@ const HomeScreen = () => {
       </Hero>
       <StyledScreenWrapper>
         <StyledMissionStatementBanner>
-          YOGA•COMMUNITY•EMPOWERMENT
+          YOGA • COMMUNITY • EMPOWERMENT
         </StyledMissionStatementBanner>
         <InstagramFeed />
         <Signup />
