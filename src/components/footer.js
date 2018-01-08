@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import JAALogo from '../images/logo/jaaLogo.png';
+import JAALogo from '../images/logo/JALogo.png';
 import fbIcon from '../images/icons/fbIcon.svg';
 import igIcon from '../images/icons/igIcon.svg';
 
