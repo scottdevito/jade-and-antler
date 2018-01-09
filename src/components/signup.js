@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
+import '../styles/mui-theme/signup.css';
 
 class Signup extends Component {
   render() {
@@ -11,16 +12,7 @@ class Signup extends Component {
         <StyledSubtleText>
           Sign up to receive the latest news on new workshops and blog posts
         </StyledSubtleText>
-        <TextField
-          label="Enter your email"
-          style={{
-            width: 250,
-            marginLeft: 20,
-            marginRight: 20,
-            marginTop: 0,
-          }}
-          margin="normal"
-        />
+        <StyledTextField label="Enter your email" margin="normal" />
         <Button style={{ marginTop: '1em', marginBottom: '2em' }}>
           Submit
         </Button>
@@ -46,4 +38,11 @@ const StyledSubtleText = styled.p`
   color: #5f5e5e;
   margin: 1em;
   text-align: center;
+`;
+
+const StyledTextField = styled(TextField)`
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
 `;

@@ -11,11 +11,6 @@ const Footer = () => {
       <StyledJAALogo />
 
       <StyledNavAndSocial>
-        <StyledNavItem>Home</StyledNavItem>
-        <StyledNavItem>About</StyledNavItem>
-        <StyledNavItem>Workshops</StyledNavItem>
-        <StyledNavItem>Blog</StyledNavItem>
-
         <StyledNavItem>
           <StyledSocialIcon src={fbIcon} alt="facebook icon" />
         </StyledNavItem>
