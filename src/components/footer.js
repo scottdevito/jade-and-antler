@@ -42,7 +42,7 @@ const StyledFooter = styled.div`
   color: #ffffff;
 
   @media (max-width: 767px) {
-    height: 16em;
+    height: 10em;
   }
 `;
 

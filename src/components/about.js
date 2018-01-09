@@ -92,8 +92,8 @@ const StyledAboutUsWrapper = styled.div`
   align-items: center;
   width: 60vw;
   text-align: center;
-  font-size: 1.25rem;
   margin-bottom: 2em;
+  font-size: 1.3rem;
 
   @media (max-width: 1023px) {
     width: 90vw;
@@ -120,9 +120,9 @@ const StyledAboutWrapper = styled.div`
   align-items: center;
   width: 70vw;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   overflow: hidden;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   
   @media (max-width: 1023px) {
     flex-direction: column;
@@ -140,9 +140,9 @@ const StyledAboutReverseWrapper = styled.div`
   align-items: center;
   width: 70vw;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   overflow: hidden;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   
   @media (max-width: 1023px) {
     flex-direction: column-reverse;
