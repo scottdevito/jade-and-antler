@@ -7,7 +7,10 @@ import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 import ShareIcon from 'material-ui-icons/Share';
 
+const currentDate = new Date();
+
 const WorkshopCard = ({ event }) => {
+  console.log(currentDate.toString().slice(4, 15));
   return (
     <StyledCard>
       <CardHeader
@@ -16,20 +19,30 @@ const WorkshopCard = ({ event }) => {
         subheader={`${event.month} ${event.day}, ${event.year}`}
       />
       <CardContent>
-        <Typography paragraph type="p" style={{ marginBottom: '1px' }}>
+        <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
           <a href={event.eventLink} rel="noopener noreferrer" target="_blank">
             {event.venue}
           </a>
         </Typography>
-        <Typography paragraph type="p" style={{ marginBottom: '1px' }}>
+        <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
           {event.address} {` ${event.location}`}
         </Typography>
-        <Typography paragraph type="p" style={{ marginBottom: '1px' }}>
+        <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
           {`${event.timeStart} - `} {event.timeEnd}
+        </Typography>
+        <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
+          {`Earlybird price: $${event.earlybirdPrice}`}
         </Typography>
       </CardContent>
       <CardContent>
-        <Typography component="p">{event.description}</Typography>
+        <Typography component="p" type="title">
+          {event.descriptionHeader}
+        </Typography>
+      </CardContent>
+      <CardContent>
+        <Typography component="p" type="body1">
+          {event.descriptionMain}
+        </Typography>
       </CardContent>
       <CardActions disableActionSpacing>
         <IconButton aria-label="Share">
