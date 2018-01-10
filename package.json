@@ -11,8 +11,7 @@
     "redux": "^3.7.2",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^2.4.0",
-    "typeface-roboto": "0.0.45"
+    "styled-components": "^2.4.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.17"

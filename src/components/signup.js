@@ -7,12 +7,22 @@ class Signup extends Component {
   render() {
     return (
       <StyledSignup>
-        <h1>Sign up for updates</h1>
+        <h1>Let's stay in touch</h1>
         <StyledSubtleText>
           Sign up to receive the latest news on new workshops and blog posts
         </StyledSubtleText>
         <StyledTextField label="Enter your email" margin="normal" />
-        <StyledButton>Submit</StyledButton>
+        <StyledButton
+          style={{
+            background: '#b29e93',
+            borderRadius: 3,
+            border: 0,
+            color: 'white',
+            padding: '0 30px',
+          }}
+        >
+          Sign up
+        </StyledButton>
       </StyledSignup>
     );
   }
