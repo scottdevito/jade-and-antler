@@ -73,8 +73,6 @@ const StyledMissionStatementBanner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
-  background-color: #b29e93;
   font-weight: bold;
   font-size: 1.75em;
   height: 4em;
@@ -83,7 +81,7 @@ const StyledMissionStatementBanner = styled.div`
 
   @media (max-width: 767px) {
     font-size: 1em;
-    height: 8em;
-    margin-top: 6em;
+    height: 4em;
+    margin-top: 7em;
   }
 `;
