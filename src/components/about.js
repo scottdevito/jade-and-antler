@@ -172,7 +172,7 @@ const StyledAboutJeanineImage = StyledAboutImage.extend`
 
 const StyledAboutJessicaImage = StyledAboutImage.extend`
 @media (min-width: 767px) {
-  margin-left: 8em;
+  margin-left: 6em;
   }
 }
 `;
