@@ -29,10 +29,11 @@ const StyledGridListContainer = styled.div`
   width: 65vw;
   /* height: 250 */
   margin-top: 10em;
-  margin-bottom: 10em;
+  margin-bottom: 16em;
 
   @media (max-width: 767px) {
     margin-top: 6em;
+    margin-bottom: 12em;
   }
 `;
 
