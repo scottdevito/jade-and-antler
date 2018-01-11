@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import homeHeroImage from '../images/heros/homeHeroImage.jpg';
-import Signup from '../components/signup.js';
+import Signup from '../components/signup/signup.js';
 import InstagramFeed from '../components/instagram/instagram_feed';
 import Footer from '../components/footer';
 

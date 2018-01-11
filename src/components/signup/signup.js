@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 
+import EmailSubmitSuccessMessage from './emailSubmitSuccessMessage';
+
 class Signup extends Component {
   state = {
     email: '',
@@ -17,11 +19,15 @@ class Signup extends Component {
   };
 
   onSubmitEmailToMailingList = () => {
-    this.props.submitEmailToMailingList(this.state.email);
+    if (this.state.email !== '') {
+      this.props.submitEmailToMailingList(this.state.email);
+    }
   };
 
   render() {
-    return (
+    return this.props.emailSubmitted ? (
+      <EmailSubmitSuccessMessage />
+    ) : (
       <StyledSignup>
         <h1>Let's stay in touch</h1>
         <StyledSubtleText>
@@ -64,6 +70,8 @@ const StyledSignup = styled.div`
   width: 100%;
   padding-top: 3em;
   padding-bottom: 3em;
+
+  transition: all 12s ease;
 `;
 
 const StyledSubtleText = styled.p`
