@@ -4,6 +4,22 @@ import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 
 class Signup extends Component {
+  state = {
+    email: '',
+  };
+
+  onEmailInputChange = event => {
+    let value = event.target.value;
+
+    this.setState((prevState, props) => {
+      return { email: value };
+    });
+  };
+
+  onSubmitEmailToMailingList = () => {
+    this.props.submitEmailToMailingList(this.state.email);
+  };
+
   render() {
     return (
       <StyledSignup>
@@ -11,8 +27,16 @@ class Signup extends Component {
         <StyledSubtleText>
           Sign up to receive the latest news on new workshops and blog posts
         </StyledSubtleText>
-        <StyledTextField label="Enter your email" margin="normal" />
+        <StyledTextField
+          onChange={event => {
+            this.onEmailInputChange(event);
+          }}
+          value={this.state.email}
+          label="Enter your email"
+          margin="normal"
+        />
         <StyledButton
+          onClick={() => this.onSubmitEmailToMailingList()}
           style={{
             background: '#b29e93',
             borderRadius: 3,

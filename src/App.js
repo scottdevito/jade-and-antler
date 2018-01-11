@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import AppBarNav from './components/app_bar_nav';
-import HomeScreen from './screens/home_screen';
+import HomeScreenContainer from './containers/home_screen.C';
 import AboutScreen from './screens/about_screen';
 import WorkshopsScreen from './screens/workshops_screen';
 
@@ -20,7 +20,7 @@ class App extends Component {
               return null;
             }}
           />
-          <Route exact path="/" component={HomeScreen} />
+          <Route exact path="/" component={HomeScreenContainer} />
           <Route path="/about" component={AboutScreen} />
           <Route path="/workshops" component={WorkshopsScreen} />
           {/*

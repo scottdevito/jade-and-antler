@@ -6,7 +6,7 @@ import Signup from '../components/signup.js';
 import InstagramFeed from '../components/instagram/instagram_feed';
 import Footer from '../components/footer';
 
-const HomeScreen = () => {
+const HomeScreen = ({ submitEmailToMailingList, emailSubmitted }) => {
   return (
     <div>
       <Hero>
@@ -17,7 +17,10 @@ const HomeScreen = () => {
           COMMUNITY • YOGA • EMPOWERMENT
         </StyledMissionStatementBanner>
         <InstagramFeed />
-        <Signup />
+        <Signup
+          submitEmailToMailingList={submitEmailToMailingList}
+          emailSubmitted={emailSubmitted}
+        />
       </StyledScreenWrapper>
       <Footer />
     </div>

@@ -1,0 +1,3 @@
+// Signup
+export const SUBMIT_EMAIL_SUCCESS = 'SUBMIT_EMAIL_SUCCESS';
+export const SUBMIT_EMAIL_FAIL = 'SUBMIT_EMAIL_FAIL';
