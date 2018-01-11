@@ -3,12 +3,14 @@ import db from '../startup/db_init';
 
 // Add user email to the mailingList collection
 const submitEmailToMailingList = email => {
+  let trimmedEmail = email.toLowerCase().trim();
+
   return dispatch => {
     db
       .collection('mailingList')
-      .doc(email)
+      .doc(trimmedEmail)
       .set({
-        email,
+        email: trimmedEmail,
         dateSubmitted: new Date()
           .toJSON()
           .slice(0, 10)

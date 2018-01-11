@@ -32,6 +32,7 @@ class Signup extends Component {
             this.onEmailInputChange(event);
           }}
           value={this.state.email}
+          type="email"
           label="Enter your email"
           margin="normal"
         />
