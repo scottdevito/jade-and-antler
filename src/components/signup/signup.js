@@ -45,7 +45,7 @@ class Signup extends Component {
         <StyledButton
           onClick={() => this.onSubmitEmailToMailingList()}
           style={{
-            background: '#b29e93',
+            background: '#7b675a',
             borderRadius: 3,
             border: 0,
             color: 'white',

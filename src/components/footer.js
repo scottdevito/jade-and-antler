@@ -38,7 +38,7 @@ const StyledFooter = styled.div`
   flex-wrap: wrap;
   height: 6em;
   width: 100%;
-  background-color: #7b675a;
+  background-color: #b29e93;
   color: #ffffff;
 
   @media (max-width: 767px) {

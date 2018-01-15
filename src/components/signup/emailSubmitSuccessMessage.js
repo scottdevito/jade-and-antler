@@ -18,7 +18,7 @@ class EmailSubmitSuccessMessage extends Component {
               console.log('navigate to workshops');
             }}
             style={{
-              background: '#b29e93',
+              background: '#7b675a',
               borderRadius: 3,
               border: 0,
               color: 'white',
@@ -45,7 +45,7 @@ const StyledSignupSuccessMessage = styled.div`
   padding-top: 3em;
   padding-bottom: 3em;
 
-  transition: all 12s ease;
+  transition: all 1s ease;
 `;
 
 const StyledSubtleText = styled.p`
