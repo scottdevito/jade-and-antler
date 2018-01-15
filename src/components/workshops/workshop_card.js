@@ -6,6 +6,7 @@ import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 import ShareIcon from 'material-ui-icons/Share';
+import Button from 'material-ui/Button';
 
 const currentDate = new Date();
 
@@ -20,19 +21,36 @@ const WorkshopCard = ({ event }) => {
       />
       <CardContent>
         <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
-          <a href={event.eventLink} rel="noopener noreferrer" target="_blank">
+          <a href={event.venueLink} rel="noopener noreferrer" target="_blank">
             {event.venue}
           </a>
         </Typography>
         <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
-          {event.address} {` ${event.location}`}
+          {`${event.address} ${event.location}`}
         </Typography>
         <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
-          {`${event.timeStart} - `} {event.timeEnd}
+          {`${event.timeStart} - ${event.timeEnd}`}
         </Typography>
         <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
           {`Earlybird price: $${event.earlybirdPrice}`}
         </Typography>
+        <StyledExternalLink
+          href={event.ticketLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <StyledButton
+            style={{
+              background: '#7b675a',
+              borderRadius: 3,
+              border: 0,
+              color: 'white',
+              padding: '0 20px',
+            }}
+          >
+            Buy Tickets
+          </StyledButton>
+        </StyledExternalLink>
       </CardContent>
       <CardContent>
         <Typography component="p" type="title">
@@ -62,4 +80,13 @@ const StyledCard = styled(Card)`
   @media (min-width: 1439px) {
     max-width: 1050px;
   }
+`;
+
+const StyledButton = styled(Button)`
+  margin-top: 0.25em;
+  margin-bottom: 1.5em;
+`;
+
+const StyledExternalLink = styled.a`
+  text-decoration: none;
 `;

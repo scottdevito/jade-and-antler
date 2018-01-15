@@ -14,9 +14,6 @@ class EmailSubmitSuccessMessage extends Component {
 
         <NavLink to="/workshops" style={{ textDecoration: 'none' }}>
           <StyledButton
-            onClick={() => {
-              console.log('navigate to workshops');
-            }}
             style={{
               background: '#7b675a',
               borderRadius: 3,
