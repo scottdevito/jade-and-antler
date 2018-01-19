@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { tileData } from '../../images/mockIgPics/tileData';
+import Instafeed from 'react-instafeed';
 
-// import InstagramFeedHeader from './instagram_feed_header';
+import { userId, clientId, accessToken } from './insta_config';
 
-function InstagramFeed(props) {
-  return (
-    <StyledGridListContainer>
-      {tileData.map(tile => {
-        console.log(tile.img);
-        <StyledTile key={tile.img} imgSrc={tile.img} />;
-      })}
-    </StyledGridListContainer>
-  );
+class InstagramFeed extends Component {
+  render() {
+    return (
+      <StyledGridListContainer>
+        <Instafeed
+          limit="6"
+          ref="instafeed"
+          resolution="thumbnail"
+          sortBy="most-recent"
+          template=""
+          userId={userId}
+          clientId={clientId}
+          accessToken={accessToken}
+        />
+        <div id="instafeed" />
+      </StyledGridListContainer>
+    );
+  }
 }
 
 export default InstagramFeed;

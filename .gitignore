@@ -30,3 +30,6 @@ node_modules
 # Firebase
 storage.rules
 startup/
+
+# Instagram API config 
+src/components/instagram/insta_config\.js
