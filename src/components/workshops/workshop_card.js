@@ -32,7 +32,10 @@ const WorkshopCard = ({ event }) => {
           {`${event.timeStart} - ${event.timeEnd}`}
         </Typography>
         <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
-          {`Earlybird price: $${event.earlybirdPrice}`}
+          {`Earlybird price (two weeks before): $${event.earlybirdPrice}`}
+        </Typography>
+        <Typography paragraph type="subheading" style={{ marginBottom: '1px' }}>
+          {`Regular price: $${event.regularPrice}`}
         </Typography>
         <StyledExternalLink
           href={event.ticketLink}

@@ -16,7 +16,7 @@ export const Workshops = [
     address: '2745 Welton St.',
     timeStart: '3pm',
     timeEnd: '5pm',
-    normalPrice: 35,
+    regularPrice: 35,
     earlybirdPrice: 30,
   },
   {
@@ -36,7 +36,7 @@ export const Workshops = [
     address: '1828 S. Coast Hwy',
     timeStart: '1pm',
     timeEnd: '3pm',
-    normalPrice: 35,
+    regularPrice: 35,
     earlybirdPrice: 30,
   },
 ];
