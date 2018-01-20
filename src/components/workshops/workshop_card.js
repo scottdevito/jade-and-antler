@@ -8,10 +8,10 @@ import Typography from 'material-ui/Typography';
 import ShareIcon from 'material-ui-icons/Share';
 import Button from 'material-ui/Button';
 
-const currentDate = new Date();
+// const currentDate = new Date();
 
 const WorkshopCard = ({ event }) => {
-  console.log(currentDate.toString().slice(4, 15));
+  // console.log(currentDate.toString().slice(4, 15));
   return (
     <StyledCard>
       <CardHeader

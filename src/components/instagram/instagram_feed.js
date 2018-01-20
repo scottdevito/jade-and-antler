@@ -4,21 +4,32 @@ import Instafeed from 'react-instafeed';
 
 import { userId, clientId, accessToken } from './insta_config';
 
+const igFeedTemplate =
+  '<a href="{{link}}" target="_blank" class="instafeed__item">' +
+  '<img class="instafeed__item__background" src="{{image}}" />' +
+  '</div>' +
+  '</a>';
+
 class InstagramFeed extends Component {
+  // To fix bug in react-instafeed where instafeed continues to render feed multiple times on re-render
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <StyledGridListContainer>
         <Instafeed
           limit="6"
           ref="instafeed"
-          resolution="thumbnail"
+          resolution="low_resolution"
           sortBy="most-recent"
-          template=""
+          template={igFeedTemplate}
           userId={userId}
           clientId={clientId}
           accessToken={accessToken}
         />
-        <div id="instafeed" />
+        <StyledInstafeed id="instafeed" />
       </StyledGridListContainer>
     );
   }
@@ -31,7 +42,7 @@ const StyledGridListContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 65vw;
+  width: 75vw;
   /* height: 250 */
   margin-top: 10em;
   margin-bottom: 16em;
@@ -44,19 +55,10 @@ const StyledGridListContainer = styled.div`
   }
 `;
 
-const StyledTile = styled.div`
-  height: 100px;
-  background-image: url('${props => props.imgSrc}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-  @media (max-width > 425px && max-width < 769px) {
-    height: 100px;
-  }
-
-  @media (max-width > 769px) {
-    height: 240px;
-  }
+const StyledInstafeed = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 `;
