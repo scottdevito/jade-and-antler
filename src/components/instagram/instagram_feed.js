@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Instafeed from 'react-instafeed';
+import '../../styles/ig_responsive_images.css';
 
 import { userId, clientId, accessToken } from './insta_config';
 
 const igFeedTemplate =
   '<a href="{{link}}" target="_blank" class="instafeed__item">' +
-  '<img class="instafeed__item__background" src="{{image}}" />' +
+  '<img class="instafeed__item__background ig-img-responsive" src="{{image}}" />' +
   '</div>' +
   '</a>';
 
