@@ -6,6 +6,7 @@ import AppBarNav from './components/app_bar_nav';
 import HomeScreenContainer from './containers/home_screen.C';
 import AboutScreen from './screens/about_screen';
 import WorkshopsScreen from './screens/workshops_screen';
+import PodcastScreen from './screens/podcast_screen';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route exact path="/" component={HomeScreenContainer} />
           <Route path="/about" component={AboutScreen} />
           <Route path="/workshops" component={WorkshopsScreen} />
+          <Route path="/podcast" component={PodcastScreen} />
           {/*
       <Route path="/blog" component={BlogScreen}/> */}
         </StyledApp>

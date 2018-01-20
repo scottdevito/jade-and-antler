@@ -25,8 +25,8 @@ class AppBarNav extends Component {
             </NavLink>
           </StyledNavLink>
           <StyledNavLink>
-            <NavLink to="/blog" style={{ textDecoration: 'none' }}>
-              <Button>Blog</Button>
+            <NavLink to="/podcast" style={{ textDecoration: 'none' }}>
+              <Button>Podcast</Button>
             </NavLink>
           </StyledNavLink>
         </StyledNavLinks>
