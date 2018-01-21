@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 
 import EmailSubmitSuccessMessage from './emailSubmitSuccessMessage';
+import SignupInput from './signup_input.MUI';
 
 class Signup extends Component {
   state = {
@@ -33,15 +33,9 @@ class Signup extends Component {
         <StyledSubtleText>
           Sign up to receive the latest news on new workshops and blog posts
         </StyledSubtleText>
-        <StyledTextField
-          onChange={event => {
-            this.onEmailInputChange(event);
-          }}
-          value={this.state.email}
-          type="email"
-          label="Enter your email"
-          margin="normal"
-        />
+
+        <SignupInput onEmailInputChange={this.onEmailInputChange} />
+
         <StyledButton
           onClick={() => this.onSubmitEmailToMailingList()}
           style={{
@@ -76,15 +70,8 @@ const StyledSignup = styled.div`
 
 const StyledSubtleText = styled.p`
   color: #5f5e5e;
-  margin: 1em;
+  margin: 0.75em;
   text-align: center;
-`;
-
-const StyledTextField = styled(TextField)`
-  width: 250px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 0px;
 `;
 
 const StyledButton = styled(Button)`

@@ -32,6 +32,7 @@ const StyledScreenWrapper = styled.div`
   align-items: center;
   padding-bottom: 4em;
   margin-top: 3.5em;
+  height: 73vh;
 `;
 
 const StyledPodcastEpisode = styled.div`
