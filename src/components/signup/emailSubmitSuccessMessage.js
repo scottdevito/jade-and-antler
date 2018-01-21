@@ -41,6 +41,7 @@ const StyledSignupSuccessMessage = styled.div`
   width: 100%;
   padding-top: 3em;
   padding-bottom: 3em;
+  height: 20em;
 
   transition: all 1s ease;
 `;

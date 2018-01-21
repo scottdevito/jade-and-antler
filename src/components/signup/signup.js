@@ -64,7 +64,7 @@ const StyledSignup = styled.div`
   width: 100%;
   padding-top: 3em;
   padding-bottom: 3em;
-
+  height: 20em;
   transition: all 12s ease;
 `;
 
