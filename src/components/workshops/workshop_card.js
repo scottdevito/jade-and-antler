@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Card, { CardHeader, CardContent, CardActions } from 'material-ui/Card';
+import Card, { CardHeader, CardContent } from 'material-ui/Card';
 import Avatar from 'material-ui/Avatar';
-import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
-import ShareIcon from 'material-ui-icons/Share';
 import Button from 'material-ui/Button';
 
 // const currentDate = new Date();
@@ -65,11 +63,6 @@ const WorkshopCard = ({ event }) => {
           {event.descriptionMain}
         </Typography>
       </CardContent>
-      <CardActions disableActionSpacing>
-        <IconButton aria-label="Share">
-          <ShareIcon />
-        </IconButton>
-      </CardActions>
     </StyledCard>
   );
 };
