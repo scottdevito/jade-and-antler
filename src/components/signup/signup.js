@@ -8,6 +8,7 @@ import SignupInput from './signup_input.MUI';
 class Signup extends Component {
   state = {
     email: '',
+    isError: false,
   };
 
   onEmailInputChange = event => {
@@ -20,7 +21,18 @@ class Signup extends Component {
 
   onSubmitEmailToMailingList = () => {
     if (this.state.email !== '') {
-      this.props.submitEmailToMailingList(this.state.email);
+      // Clear error if there is one
+      this.setState(prevState => {
+        return { isError: false };
+      });
+
+      try {
+        this.props.submitEmailToMailingList(this.state.email);
+      } catch (error) {
+        this.setState(prevState => {
+          return { isError: !prevState.isError };
+        });
+      }
     }
   };
 
@@ -34,7 +46,10 @@ class Signup extends Component {
           Sign up to receive the latest news on new workshops and blog posts
         </StyledSubtleText>
 
-        <SignupInput onEmailInputChange={this.onEmailInputChange} />
+        <SignupInput
+          onEmailInputChange={this.onEmailInputChange}
+          isError={this.state.isError}
+        />
 
         <StyledButton
           onClick={() => this.onSubmitEmailToMailingList()}

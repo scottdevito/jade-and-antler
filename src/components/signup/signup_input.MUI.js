@@ -33,14 +33,14 @@ function SignupInput(props) {
 
   return (
     <div className={classes.container}>
-      <FormControl className={classes.formControl}>
+      <FormControl className={classes.formControl} error={props.isError}>
         <InputLabel
           FormControlClasses={{
             focused: classes.inputLabelFocused,
           }}
           htmlFor="custom-color-input"
         >
-          Enter your email
+          {props.isError ? 'Please enter a valid email' : 'Enter your email'}
         </InputLabel>
         <Input
           classes={{
@@ -51,6 +51,7 @@ function SignupInput(props) {
           onChange={event => {
             props.onEmailInputChange(event);
           }}
+          error={props.isError}
         />
       </FormControl>
     </div>

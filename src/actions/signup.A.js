@@ -6,6 +6,11 @@ const submitEmailToMailingList = email => {
   let trimmedEmail = email.toLowerCase().trim();
 
   return dispatch => {
+    const emailValidate = /\S+@\S+\.\S+/;
+    if (!emailValidate.test(email)) {
+      throw new Error('Please enter a valid email');
+    }
+
     db
       .collection('mailingList')
       .doc(trimmedEmail)
@@ -21,7 +26,7 @@ const submitEmailToMailingList = email => {
       })
       .catch(function(error) {
         dispatch({ type: SUBMIT_EMAIL_FAIL });
-        console.error('Error submitting email: ', error);
+        return error;
       });
   };
 };

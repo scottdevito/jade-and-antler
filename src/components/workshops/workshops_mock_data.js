@@ -30,7 +30,8 @@ export const Workshops = [
     descriptionMain:
       'True North is a workshop specifically designed to lead individuals to engage in personal alchemy in order to step out of fear and into their authentic selves and desires. We will discuss practical tools and exercises that will help you access and align with your intuition and passions. Jessica & Jeanine will guide you through a yoga asana class designed to both open your heart as well as ground you in your body, a guided meditation, mind-shifting exercises and community discussion to get you out of your head where your “stories” often lie and into your body where your true wisdom, or intuition,  lies. Here you can begin to reframe and restructure your limiting beliefs in order to create an intentional and co-created life of your wildest dreams.',
     venueLink: 'http://www.blacksheepyogastudio.com',
-    ticketLink: '',
+    ticketLink:
+      'https://clients.mindbodyonline.com/classic/mainclass?studioid=26776&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2f21%2f2018&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1',
     location: 'Oceanside, CA',
     venue: 'Black Sheep Yoga',
     address: '1828 S. Coast Hwy',
