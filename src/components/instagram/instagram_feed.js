@@ -6,9 +6,8 @@ import '../../styles/ig_responsive_images.css';
 import { userId, clientId, accessToken } from './insta_config';
 
 const igFeedTemplate =
-  '<a href="{{link}}" target="_blank" class="instafeed__item">' +
-  '<img class="instafeed__item__background ig-img-responsive" src="{{image}}" />' +
-  '</div>' +
+  '<a href="{{link}}" target="_blank" rel="noopener" class="instafeed__item">' +
+  '<img class="instafeed__item__background ig-img-responsive" src="{{image}}" alt="instagram image" />' +
   '</a>';
 
 class InstagramFeed extends Component {
