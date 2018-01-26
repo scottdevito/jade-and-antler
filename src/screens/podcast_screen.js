@@ -8,6 +8,19 @@ const PodcastScreen = () => {
     <div>
       <StyledScreenWrapper>
         <StyledPodcastEpisode>
+          <StyledPodcastTitle>
+            Episode 2 - The Practice of Trust
+          </StyledPodcastTitle>
+          <StyledIframe
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/389192916&amp;color=%237b675a&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
+          />
+        </StyledPodcastEpisode>
+
+        <StyledPodcastEpisode>
           <StyledPodcastTitle>Episode 1 - Our First Podcast</StyledPodcastTitle>
           <StyledIframe
             height="166"
@@ -32,11 +45,10 @@ const StyledScreenWrapper = styled.div`
   align-items: center;
   padding-bottom: 4em;
   margin-top: 3.5em;
-  height: 73vh;
 `;
 
 const StyledPodcastEpisode = styled.div`
-  margin: 5em;
+  margin: 4em;
 `;
 
 const StyledIframe = styled.iframe`
