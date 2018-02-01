@@ -159,6 +159,7 @@ const StyledAboutImage = styled.img`
   margin-bottom: 1.5em;
   margin-left: 4.5em;
   margin-right: 4.5em;
+  border-radius: 4px;
 
   @media (max-width: 767px) {
     width: 70vw;
