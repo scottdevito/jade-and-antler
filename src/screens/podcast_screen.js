@@ -1,53 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Footer from '../components/footer';
 
-const PodcastScreen = () => {
-  return (
-    <div>
-      <StyledScreenWrapper>
-        <StyledPodcastEpisode>
-          <StyledPodcastTitle>
-            Episode 3 - Accidentally Political
-          </StyledPodcastTitle>
-          <StyledIframe
-            height="166"
-            scrolling="no"
-            frameborder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/392989050&amp;color=%235e4f45&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
-          />
-        </StyledPodcastEpisode>
+class PodcastScreen extends Component {
+  componentDidMount() {
+    this.props.getPodcastEpisodes();
+  }
 
-        <StyledPodcastEpisode>
-          <StyledPodcastTitle>
-            Episode 2 - The Practice of Trust
-          </StyledPodcastTitle>
+  renderPodcastEpisodes = () => {
+    // Map over array of podcast episodes and render
+    return (this.props.podcastEpisodes || []).map(episode => {
+      return (
+        <StyledPodcastEpisode key={episode.url}>
+          <StyledPodcastTitle>{`${episode.title}`}</StyledPodcastTitle>
           <StyledIframe
             height="166"
             scrolling="no"
             frameborder="no"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/389192916&amp;color=%237b675a&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
+            src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${
+              episode.url
+            }&amp;color=%235e4f45&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true`}
           />
         </StyledPodcastEpisode>
+      );
+    });
+  };
 
-        <StyledPodcastEpisode>
-          <StyledPodcastTitle>Episode 1 - Our First Podcast</StyledPodcastTitle>
-          <StyledIframe
-            height="166"
-            scrolling="no"
-            frameborder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/385577105&amp;color=%237b675a&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
-          />
-        </StyledPodcastEpisode>
-      </StyledScreenWrapper>
-      <Footer />
-    </div>
-  );
-};
+  render() {
+    return (
+      <div>
+        <StyledScreenWrapper>
+          {this.renderPodcastEpisodes()}
+        </StyledScreenWrapper>
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default PodcastScreen;
 
