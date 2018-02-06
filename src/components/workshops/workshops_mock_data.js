@@ -1,5 +1,25 @@
 export const Workshops = [
   {
+    eventId: '0003',
+    name: 'TRUE NORTH',
+    month: 'February',
+    day: 24,
+    year: 2018,
+    descriptionHeader:
+      'TRUE NORTH: Find your direction. Shift your perspective. Step into your authenticity. ',
+    descriptionMain:
+      'True North is a workshop specifically designed to lead individuals to engage in personal alchemy in order to step out of fear and into their authentic selves and desires. We will discuss practical tools and exercises that will help you access and align with your intuition and passions. Jessica & Jeanine will guide you through a yoga asana class designed to both open your heart as well as ground you in your body, a guided meditation, mind-shifting exercises and community discussion to get you out of your head where your “stories” often lie and into your body where your true wisdom, or intuition,  lies. Here you can begin to reframe and restructure your limiting beliefs in order to create an intentional and co-created life of your wildest dreams.',
+    venueLink: 'https://www.evolveyogadenver.com/',
+    ticketLink: 'https://www.evolveyogadenver.com/events/true-north',
+    location: 'Denver, CO',
+    venue: 'Evolve Yoga Denver',
+    address: '1321 S. Broadway',
+    timeStart: '5pm',
+    timeEnd: '7pm',
+    regularPrice: 35,
+    earlybirdPrice: 30,
+  },
+  {
     eventId: '0001',
     name: 'TRUE NORTH',
     month: 'February',
