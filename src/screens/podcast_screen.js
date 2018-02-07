@@ -5,7 +5,9 @@ import Footer from '../components/footer';
 
 class PodcastScreen extends Component {
   componentDidMount() {
-    this.props.getPodcastEpisodes();
+    if (this.props.podcastEpisodes.length === 0) {
+      this.props.getPodcastEpisodes();
+    }
   }
 
   renderPodcastEpisodes = () => {
