@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AppBarNav from './components/app_bar_nav';
 import HomeScreenContainer from './containers/home_screen.C';
 import AboutScreen from './screens/about_screen';
-import WorkshopsScreen from './screens/workshops_screen';
+import WorkshopsScreenContainer from './containers/workshops_screen.C';
 import PodcastScreenContainer from './containers/podcast_screen.C';
 
 class App extends Component {
@@ -23,7 +23,7 @@ class App extends Component {
           />
           <Route exact path="/" component={HomeScreenContainer} />
           <Route path="/about" component={AboutScreen} />
-          <Route path="/workshops" component={WorkshopsScreen} />
+          <Route path="/workshops" component={WorkshopsScreenContainer} />
           <Route path="/podcast" component={PodcastScreenContainer} />
           {/*
       <Route path="/blog" component={BlogScreen}/> */}

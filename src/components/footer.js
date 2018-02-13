@@ -38,9 +38,8 @@ const StyledFooter = styled.div`
   flex-wrap: wrap;
   height: 6em;
   width: 100%;
-  background-color: #b29e93;
+  background: linear-gradient(135deg, #b29e93 1%, #827065 100%);
   color: #ffffff;
-
   @media (max-width: 767px) {
     height: 10em;
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import homeHeroImage from '../images/heros/homeHeroImage.jpg';
@@ -6,26 +6,35 @@ import Signup from '../components/signup/signup.js';
 import InstagramFeed from '../components/instagram/instagram_feed';
 import Footer from '../components/footer';
 
-const HomeScreen = ({ submitEmailToMailingList, emailSubmitted }) => {
-  return (
-    <div>
-      <Hero>
-        <Title>JADE&ANTLER</Title>
-      </Hero>
-      <StyledScreenWrapper>
-        <StyledMissionStatementBanner>
-          COMMUNITY • YOGA • EMPOWERMENT
-        </StyledMissionStatementBanner>
-        <InstagramFeed />
-        <Signup
-          submitEmailToMailingList={submitEmailToMailingList}
-          emailSubmitted={emailSubmitted}
-        />
-      </StyledScreenWrapper>
-      <Footer />
-    </div>
-  );
-};
+class HomeScreen extends Component {
+  componentDidMount() {
+    if (this.props.workshops.length === 0) {
+      this.props.getWorkshops();
+    }
+  }
+
+  render() {
+    let { submitEmailToMailingList, emailSubmitted } = this.props;
+    return (
+      <div>
+        <Hero>
+          <Title>JADE&ANTLER</Title>
+        </Hero>
+        <StyledScreenWrapper>
+          <StyledMissionStatementBanner>
+            COMMUNITY • YOGA • EMPOWERMENT
+          </StyledMissionStatementBanner>
+          <InstagramFeed />
+          <Signup
+            submitEmailToMailingList={submitEmailToMailingList}
+            emailSubmitted={emailSubmitted}
+          />
+        </StyledScreenWrapper>
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default HomeScreen;
 

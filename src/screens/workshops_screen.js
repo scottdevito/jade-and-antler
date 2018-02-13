@@ -13,6 +13,12 @@ import MayImg from '../images/workshopHeaders/may.jpg';
 import { Workshops } from '../components/workshops/workshops_mock_data';
 
 class WorkshopsScreen extends Component {
+  componentDidMount() {
+    if (this.props.workshops.length === 0) {
+      this.props.getWorkshops();
+    }
+  }
+
   renderWorkshopsWithHeaders = Workshops => {
     let currentMonth = 'none';
 
