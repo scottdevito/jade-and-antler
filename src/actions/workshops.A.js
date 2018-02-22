@@ -6,6 +6,7 @@ const getWorkshops = () => {
   return dispatch => {
     db
       .collection('workshops')
+      .orderBy('UTCStart')
       .get()
       .then(function(querySnapshot) {
         let workshopsArray = [];
