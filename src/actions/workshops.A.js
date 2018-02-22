@@ -4,9 +4,12 @@ import db from '../startup/db_init';
 // Add user email to the mailingList collection
 const getWorkshops = () => {
   return dispatch => {
+    let dateNow = new Date(Date.now()).getTime();
+
     db
       .collection('workshops')
-      .orderBy('UTCStart')
+      .where('UTCSort', '>', dateNow)
+      .orderBy('UTCSort')
       .get()
       .then(function(querySnapshot) {
         let workshopsArray = [];
