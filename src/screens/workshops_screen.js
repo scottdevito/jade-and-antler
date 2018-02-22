@@ -10,8 +10,6 @@ import MarImg from '../images/workshopHeaders/mar.jpg';
 import AprImg from '../images/workshopHeaders/apr.jpg';
 import MayImg from '../images/workshopHeaders/may.jpg';
 
-import { Workshops } from '../components/workshops/workshops_mock_data';
-
 class WorkshopsScreen extends Component {
   componentDidMount() {
     if (this.props.workshops.length === 0) {
@@ -82,7 +80,7 @@ class WorkshopsScreen extends Component {
     return (
       <div>
         <StyledScreenWrapper>
-          {this.renderWorkshopsWithHeaders(Workshops)}
+          {this.renderWorkshopsWithHeaders(this.props.workshops)}
         </StyledScreenWrapper>
         <Footer />
       </div>
@@ -98,7 +96,7 @@ const StyledScreenWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 
   /* AppBarNav offset */
   margin-top: 3.5em;
