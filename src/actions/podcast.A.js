@@ -6,6 +6,7 @@ const getPodcastEpisodes = () => {
   return dispatch => {
     db
       .collection('podcastEpisodes')
+      .orderBy('UTCDate', 'desc')
       .get()
       .then(function(querySnapshot) {
         let podcastEpisodesArray = [];
