@@ -80,7 +80,14 @@ class WorkshopsScreen extends Component {
     return (
       <div>
         <StyledScreenWrapper>
-          {this.renderWorkshopsWithHeaders(this.props.workshops)}
+          {this.props.workshops.length > 0 ? (
+            this.renderWorkshopsWithHeaders(this.props.workshops)
+          ) : (
+            <NoWorkshopsSection>
+              <h1>No upcoming workshops at this time</h1>
+              <StyledSubtleText>Please check back soon!</StyledSubtleText>
+            </NoWorkshopsSection>
+          )}
         </StyledScreenWrapper>
         <Footer />
       </div>
@@ -96,7 +103,6 @@ const StyledScreenWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: 1em;
 
   /* AppBarNav offset */
   margin-top: 3.5em;
@@ -132,4 +138,18 @@ const StyledMonthHeaderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const StyledSubtleText = styled.p`
+  color: #5f5e5e;
+  margin: 0.75em;
+  text-align: center;
+`;
+
+const NoWorkshopsSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 `;

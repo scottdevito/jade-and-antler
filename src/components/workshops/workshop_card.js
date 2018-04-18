@@ -6,10 +6,7 @@ import Avatar from 'material-ui/Avatar';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 
-// const currentDate = new Date();
-
 const WorkshopCard = ({ event }) => {
-  // console.log(currentDate.toString().slice(4, 15));
   return (
     <StyledCard>
       <CardHeader
