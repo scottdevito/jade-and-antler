@@ -26,49 +26,65 @@ const About = () => {
       <StyledAboutHeader>JEANINE</StyledAboutHeader>
       <StyledAboutWrapper>
         <StyledAboutJeanineImage src={aboutJeanineImage} alt="Jeanine" />
-        <p>
-          Jeanine Talento, E-RYT, is a New York native currently living in
-          Oceanside, California. Jeanine was introduced to the healing benefits
-          of Yoga in 2006 & decided to become a teacher in 2013. She studied
-          with Sadhana Yoga School in Savusavu, Fiji for her 200hr teacher
-          training where she fell in love with both traveling and teaching. Now,
-          5 years later, Jeanine is a facilitator with Sadhana Yoga School and
-          assists on 200hr teacher trainings internationally. She is currently
-          working on her 500hr advanced teacher training at Prana Yoga Center in
-          La Jolla, CA. Jeanine is a Certified Integrative Life Coach and hopes
-          to create a safe space for her students to heal and transform their
-          inner worlds. Additionally, Jeanine holds her Bachelor of Arts from
-          CUNY Queens College and is in the process of applying to Graduate
-          school for Mental Health Counseling. Jeanine is thrilled to
-          collaborate creatively with Jessica in spirit and energy to bring
-          uplifting, empowering and transformative programs to their communities
-          through Jade&Antler.
-        </p>
+        <div>
+          <p>
+            Jeanine Talento, E-RYT, is a New York native currently living in
+            Oceanside, California. Jeanine was introduced to the healing
+            benefits of Yoga in 2006 & decided to become a teacher in 2013. She
+            studied with Sadhana Yoga School in Savusavu, Fiji for her 200hr
+            teacher training where she fell in love with both traveling and
+            teaching. Now, 5 years later, Jeanine is a facilitator with Sadhana
+            Yoga School and assists on 200hr teacher trainings internationally.
+            She has recently completed her 500hr advanced teacher training at
+            Prana Yoga Center in La Jolla, CA.
+          </p>
+          <p>
+            As a Certified Integrative Life Coach, Jeanine hopes to create a
+            safe space for her students to heal and transform their inner
+            worlds. Additionally, Jeanine holds her Bachelor of Arts from CUNY
+            Queens College and is in the process of applying to Graduate school
+            for Mental Health Counseling.
+          </p>
+          <p>
+            Jeanine is thrilled to collaborate creatively with Jessica in spirit
+            and energy to bring uplifting, empowering and transformative
+            programs to their communities through Jade&Antler.
+          </p>
+        </div>
       </StyledAboutWrapper>
 
       <StyledAboutHeader>JESSICA</StyledAboutHeader>
       <StyledAboutReverseWrapper>
-        <p>
-          Jessica Jean is an intuitive body worker who believes in personal
-          empowerment through holistic embodiment practices. Jessica has been
-          practicing yoga for over 10 years and after completing a BA in
-          communications at Pace University, Jessica participated in her first
-          200 hour vinyasa style teacher training in 2014 at Three Sisters Yoga
-          in NYC. Since then, Jessica has fallen head over heels for teaching
-          others how to feel strong and centered in their bodies, minds and
-          hearts. Jessica is a 750 hour Licensed Massage Therapist with special
-          training in Trauma informed yoga through the prison yoga project,
-          trauma touch therapy and reiki levels I and II. Jessica will complete
-          her Hot Yoga training December of this year and will begin completing
-          hours towards her 500 hour RYT certification in early 2018. Jessica
-          also participates in weekly women's circles, where she has developed a
-          passion for the curation of intentional community as a tool for
-          personal growth. Jessica hopes that Jade&Antler will serve as a source
-          of inspiration and an outlet for creativity as well as a place where
-          loving, authentic,community lifts up everyone who crosses J&A's path
-          in ecstatic, fiery love. Jessica currently lives with her pup Lucy in
-          Denver, Colorado.
-        </p>
+        <div>
+          <p>
+            Jessica Jean is an intuitive body worker who believes in personal
+            empowerment through holistic embodiment practices. Jessica has been
+            practicing yoga for over 10 years and after completing a BA in
+            communications at Pace University, Jessica participated in her first
+            200 hour vinyasa style teacher training in 2014 at Three Sisters
+            Yoga in NYC. Since then, Jessica has fallen head over heels for
+            teaching others how to feel strong and centered in their bodies,
+            minds and hearts.
+          </p>
+
+          <p>
+            Jessica is a 750 hour Licensed Massage Therapist with special
+            training in Trauma informed yoga through the prison yoga project,
+            trauma touch therapy and reiki levels I and II. Jessica will
+            complete her Hot Yoga training December of this year and will begin
+            completing hours towards her 500 hour RYT certification in early
+            2018. Jessica also participates in weekly women's circles, where she
+            has developed a passion for the curation of intentional community as
+            a tool for personal growth.
+          </p>
+          <p>
+            Jessica hopes that Jade&Antler will serve as a source of inspiration
+            and an outlet for creativity as well as a place where loving,
+            authentic,community lifts up everyone who crosses J&A's path in
+            ecstatic, fiery love. Jessica currently lives with her pup Lucy in
+            Denver, Colorado.
+          </p>
+        </div>
         <StyledAboutJessicaImage src={aboutJessicaImage} alt="Jessica" />
       </StyledAboutReverseWrapper>
     </StyledScreenWrapper>
