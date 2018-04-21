@@ -152,4 +152,5 @@ const NoWorkshopsSection = styled.div`
   justify-content: center;
   align-items: center;
   height: 80vh;
+  text-align: center;
 `;
